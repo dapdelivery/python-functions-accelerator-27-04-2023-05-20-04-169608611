@@ -1,0 +1,1015 @@
+2023/04/27 12:11:48 /tmp/build/f3c1b5a9/source-code/suite/tap_test/models/outerloopConfig.go:111: getting outerloop config
+2023/04/27 12:11:48 /tmp/build/f3c1b5a9/source-code/suite/tap_test/models/outerloopConfig.go:123: read outerloop config file /tmp/build/f3c1b5a9/source-code/suite/resources/outerloop/outerloop-config.yaml
+2023/04/27 12:11:48 /tmp/build/f3c1b5a9/source-code/suite/tap_test/models/outerloopConfig.go:133: unmarshalled file /tmp/build/f3c1b5a9/source-code/suite/resources/outerloop/outerloop-config.yaml
+2023/04/27 12:11:48 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:148: command executed: tanzu version
+2023/04/27 12:11:48 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:153: output: version: v0.25.0
+buildDate: 2022-08-25
+sha: 6288c751-dirty
+2023/04/27 12:11:48 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:148: command executed: ls /root | grep tanzu-framework-linux-amd64
+2023/04/27 12:11:48 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:153: output: tanzu-framework-linux-amd64-v0.25.0.12.tar
+2023/04/27 12:11:48 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/tanzu-cli-funcs.go:32: Expected version of tanzu cli already installed; skip installation
+2023/04/27 12:11:48 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/config-current-context-func.go:15: changing cluster context to auto-tkgs-rkabdxiqzs
+2023/04/27 12:11:48 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: kubectl config use-context auto-tkgs-rkabdxiqzs
+2023/04/27 12:11:48 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: Switched to context "auto-tkgs-rkabdxiqzs".
+2023/04/27 12:11:48 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectl_helpers/kubectl-helper.go:913: Validating deployment exists, name: kapp-controller, namespace: 
+2023/04/27 12:11:49 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: kubectl get deployments -A
+2023/04/27 12:11:49 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: NAMESPACE                      NAME                           READY   UP-TO-DATE   AVAILABLE   AGE
+kapp-controller                kapp-controller                1/1     1            1           6h46m
+kube-system                    antrea-controller              1/1     1            1           7h5m
+kube-system                    antrea-resource-init           1/1     1            1           7h5m
+kube-system                    coredns                        2/2     2            2           7h5m
+kube-system                    metrics-server                 1/1     1            1           7h5m
+secretgen-controller           secretgen-controller           1/1     1            1           6h45m
+vmware-system-cloud-provider   guest-cluster-cloud-provider   1/1     1            1           7h5m
+vmware-system-csi              vsphere-csi-controller         3/3     3            3           7h5m
+2023/04/27 12:11:49 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectl_helpers/kubectl-helper.go:929: Deployment exists
+2023/04/27 12:11:49 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectl_helpers/kubectl-helper.go:913: Validating deployment exists, name: secretgen-controller, namespace: 
+2023/04/27 12:11:49 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: kubectl get deployments -A
+2023/04/27 12:11:49 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: NAMESPACE                      NAME                           READY   UP-TO-DATE   AVAILABLE   AGE
+kapp-controller                kapp-controller                1/1     1            1           6h46m
+kube-system                    antrea-controller              1/1     1            1           7h5m
+kube-system                    antrea-resource-init           1/1     1            1           7h5m
+kube-system                    coredns                        2/2     2            2           7h5m
+kube-system                    metrics-server                 1/1     1            1           7h5m
+secretgen-controller           secretgen-controller           1/1     1            1           6h45m
+vmware-system-cloud-provider   guest-cluster-cloud-provider   1/1     1            1           7h5m
+vmware-system-csi              vsphere-csi-controller         3/3     3            3           7h5m
+2023/04/27 12:11:49 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectl_helpers/kubectl-helper.go:929: Deployment exists
+2023/04/27 12:11:49 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/cluster-essentials-funcs.go:63: kapp-controller or secretgen-controller deployment exists.
+2023/04/27 12:11:49 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/namespace-funcs.go:19: creating namespaces [my-apps tap-install]
+2023/04/27 12:11:49 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:14: creating namespace my-apps
+2023/04/27 12:11:50 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: kubectl create ns my-apps
+2023/04/27 12:11:50 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: namespace/my-apps created
+2023/04/27 12:11:50 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:24: namespace my-apps created
+2023/04/27 12:11:50 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:25: output: namespace/my-apps created
+2023/04/27 12:11:50 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:14: creating namespace tap-install
+2023/04/27 12:11:50 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: kubectl create ns tap-install
+2023/04/27 12:11:50 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: namespace/tap-install created
+2023/04/27 12:11:50 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:24: namespace tap-install created
+2023/04/27 12:11:50 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:25: output: namespace/tap-install created
+2023/04/27 12:11:50 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/secret-funcs.go:19: creating secret tap-registry (registry registry.tanzu.vmware.com, username svc.bot.tap-ci@vmware.com) in namespace tap-install
+2023/04/27 12:11:50 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:224: creating secret tap-registry (registry registry.tanzu.vmware.com, username svc.bot.tap-ci@vmware.com, export true) in namespace tap-install
+2023/04/27 12:11:51 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:92: output: Warning: By choosing --export-to-all-namespaces, given secret contents will be available to ALL users in ALL namespaces. Please ensure that included registry credentials allow only read-only access to the registry with minimal necessary scope.
+
+
+
+ Added registry secret 'tap-registry' into namespace 'tap-install'
+ Exported registry secret 'tap-registry' to all namespaces
+2023/04/27 12:11:51 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:259: secret tap-registry (registry registry.tanzu.vmware.com, username svc.bot.tap-ci@vmware.com) created in namespace tap-install
+2023/04/27 12:11:51 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:260: output: Warning: By choosing --export-to-all-namespaces, given secret contents will be available to ALL users in ALL namespaces. Please ensure that included registry credentials allow only read-only access to the registry with minimal necessary scope.
+
+
+
+ Added registry secret 'tap-registry' into namespace 'tap-install'
+ Exported registry secret 'tap-registry' to all namespaces
+2023/04/27 12:11:51 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/secret-funcs.go:19: creating secret registry-credentials (registry dev.registry.tanzu.vmware.com, username svc.bot.tap-ci@vmware.com) in namespace my-apps
+2023/04/27 12:11:51 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:224: creating secret registry-credentials (registry dev.registry.tanzu.vmware.com, username svc.bot.tap-ci@vmware.com, export false) in namespace my-apps
+2023/04/27 12:11:53 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:92: output: 
+ Added registry secret 'registry-credentials' into namespace 'my-apps'
+2023/04/27 12:11:53 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:259: secret registry-credentials (registry dev.registry.tanzu.vmware.com, username svc.bot.tap-ci@vmware.com) created in namespace my-apps
+2023/04/27 12:11:53 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:260: output: 
+ Added registry secret 'registry-credentials' into namespace 'my-apps'
+2023/04/27 12:11:53 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/package-repository-funcs.go:20: adding package repository tanzu-tap-repository (registry.tanzu.vmware.com/tanzu-application-platform/tap-packages:1.3.8-build.4) in namespace tap-install
+2023/04/27 12:11:53 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:143: adding package repository tanzu-tap-repository (registry.tanzu.vmware.com/tanzu-application-platform/tap-packages:1.3.8-build.4) in namespace tap-install
+2023/04/27 12:12:05 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: tanzu package repository add tanzu-tap-repository --url registry.tanzu.vmware.com/tanzu-application-platform/tap-packages:1.3.8-build.4 -n tap-install
+2023/04/27 12:12:05 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: Added package repository 'tanzu-tap-repository' in namespace 'tap-install'
+2023/04/27 12:12:05 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:153: package repository tanzu-tap-repository (registry.tanzu.vmware.com/tanzu-application-platform/tap-packages:1.3.8-build.4) added in namespace tap-install
+2023/04/27 12:12:05 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:154: output: Added package repository 'tanzu-tap-repository' in namespace 'tap-install'
+2023/04/27 12:12:05 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/package-repository-funcs.go:54: checking package repository tanzu-tap-repository status
+2023/04/27 12:12:05 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:179: getting package repository tanzu-tap-repository status in namespace tap-install
+2023/04/27 12:12:06 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: tanzu package repository get tanzu-tap-repository -n tap-install -o json
+2023/04/27 12:12:06 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: [
+  {
+    "name": "tanzu-tap-repository",
+    "reason": "",
+    "repository": "registry.tanzu.vmware.com/tanzu-application-platform/tap-packages",
+    "status": "Reconcile succeeded",
+    "tag": "1.3.8-build.4",
+    "version": "136716"
+  }
+]
+2023/04/27 12:12:06 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:190: package repository tanzu-tap-repository in namespace tap-install status retrieved
+2023/04/27 12:12:06 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:191: output: [
+  {
+    "name": "tanzu-tap-repository",
+    "reason": "",
+    "repository": "registry.tanzu.vmware.com/tanzu-application-platform/tap-packages",
+    "status": "Reconcile succeeded",
+    "tag": "1.3.8-build.4",
+    "version": "136716"
+  }
+]
+2023/04/27 12:12:06 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/package-repository-funcs.go:69: package repository tanzu-tap-repository reconcilation succeeded
+2023/04/27 12:12:06 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/package-repository-funcs.go:70: listing all packages in the repository
+2023/04/27 12:12:06 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzu_helpers/tanzu-helpers.go:206: Listing all packages from namespace: tap-install
+2023/04/27 12:12:12 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: tanzu package available list -n tap-install
+2023/04/27 12:12:12 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output:   NAME                                                 DISPLAY-NAME                                                              SHORT-DESCRIPTION                                                                 LATEST-VERSION  
+  accelerator.apps.tanzu.vmware.com                    Application Accelerator for VMware Tanzu                                  Used to create new projects and configurations.                                   1.3.3           
+  api-portal.tanzu.vmware.com                          API portal                                                                A unified user interface for API discovery and exploration at scale.              1.2.13          
+  apis.apps.tanzu.vmware.com                           API Auto Registration for VMware Tanzu                                    A TAP component to automatically register API exposing workloads as API entities  0.1.3           
+                                                                                                                                 in TAP GUI.                                                                                       
+  backend.appliveview.tanzu.vmware.com                 Application Live View for VMware Tanzu                                    App for monitoring and troubleshooting running apps                               1.3.1           
+  buildservice.tanzu.vmware.com                        Tanzu Build Service                                                       Tanzu Build Service enables the building and automation of containerized          1.7.7           
+                                                                                                                                 software workflows securely and at scale.                                                         
+  carbonblack.scanning.apps.tanzu.vmware.com           VMware Carbon Black for Supply Chain Security Tools - Scan                Default scan templates using VMware Carbon Black                                  1.0.0-beta.2    
+  cartographer.tanzu.vmware.com                        Cartographer                                                              Kubernetes native Supply Chain Choreographer.                                     0.5.7           
+  cnrs.tanzu.vmware.com                                Cloud Native Runtimes                                                     Cloud Native Runtimes is a serverless runtime based on Knative                    2.0.4           
+  connector.appliveview.tanzu.vmware.com               Application Live View Connector for VMware Tanzu                          App for discovering and registering running apps                                  1.3.1           
+  controller.conventions.apps.tanzu.vmware.com         Convention Service for VMware Tanzu                                       Convention Service enables app operators to consistently apply desired runtime    0.7.2           
+                                                                                                                                 configurations to fleets of workloads.                                                            
+  controller.source.apps.tanzu.vmware.com              Tanzu Source Controller                                                   Tanzu Source Controller enables workload create/update from source code.          0.5.4           
+  conventions.appliveview.tanzu.vmware.com             Application Live View Conventions for VMware Tanzu                        Application Live View convention server                                           1.3.1           
+  developer-conventions.tanzu.vmware.com               Tanzu App Platform Developer Conventions                                  Developer Conventions                                                             0.8.1           
+  eventing.tanzu.vmware.com                            Eventing                                                                  Eventing is an event-driven architecture platform based on Knative Eventing       2.0.5           
+  fluxcd.source.controller.tanzu.vmware.com            Flux Source Controller                                                    The source-controller is a Kubernetes operator, specialised in artifacts          0.27.0+tap.7    
+                                                                                                                                 acquisition from external sources such as Git, Helm repositories and S3 buckets.                  
+  grype.scanning.apps.tanzu.vmware.com                 Grype for Supply Chain Security Tools - Scan                              Default scan templates using Anchore Grype                                        1.3.1           
+  image-policy-webhook.signing.apps.tanzu.vmware.com   Image Policy Webhook                                                      Image Policy Webhook enables defining of a policy to restrict unsigned container  1.1.11          
+                                                                                                                                 images.                                                                                           
+  learningcenter.tanzu.vmware.com                      Learning Center for Tanzu Application Platform                            Guided technical workshops                                                        0.2.4           
+  metadata-store.apps.tanzu.vmware.com                 Supply Chain Security Tools - Store                                       Post SBoMs and query for image, package, and vulnerability metadata.              1.3.8           
+  ootb-delivery-basic.tanzu.vmware.com                 Tanzu App Platform Out of The Box Delivery Basic                          Out of The Box Delivery Basic.                                                    0.10.9          
+  ootb-supply-chain-basic.tanzu.vmware.com             Tanzu App Platform Out of The Box Supply Chain Basic                      Out of The Box Supply Chain Basic.                                                0.10.9          
+  ootb-supply-chain-testing-scanning.tanzu.vmware.com  Tanzu App Platform Out of The Box Supply Chain with Testing and Scanning  Out of The Box Supply Chain with Testing and Scanning.                            0.10.9          
+  ootb-supply-chain-testing.tanzu.vmware.com           Tanzu App Platform Out of The Box Supply Chain with Testing               Out of The Box Supply Chain with Testing.                                         0.10.9          
+  ootb-templates.tanzu.vmware.com                      Tanzu App Platform Out of The Box Templates                               Out of The Box Templates.                                                         0.10.9          
+  policy.apps.tanzu.vmware.com                         Supply Chain Security Tools - Policy Controller                           Policy Controller enables defining of a policy to restrict unsigned container     1.1.5           
+                                                                                                                                 images.                                                                                           
+  scanning.apps.tanzu.vmware.com                       Supply Chain Security Tools - Scan                                        Scan for vulnerabilities and enforce policies directly within Kubernetes native   1.3.1           
+                                                                                                                                 Supply Chains.                                                                                    
+  service-bindings.labs.vmware.com                     Service Bindings for Kubernetes                                           Service Bindings for Kubernetes implements the Service Binding Specification.     0.8.2           
+  services-toolkit.tanzu.vmware.com                    Services Toolkit                                                          The Services Toolkit enables the management, lifecycle, discoverability and       0.8.3           
+                                                                                                                                 connectivity of Service Resources (databases, message queues, DNS records,                        
+                                                                                                                                 etc.).                                                                                            
+  snyk.scanning.apps.tanzu.vmware.com                  Snyk for Supply Chain Security Tools - Scan                               Default scan templates using Snyk                                                 1.0.0-beta.5    
+  spring-boot-conventions.tanzu.vmware.com             Tanzu Spring Boot Conventions Server                                      Default Spring Boot convention server.                                            0.5.0           
+  sso.apps.tanzu.vmware.com                            AppSSO                                                                    Application Single Sign-On for Tanzu                                              2.0.4           
+  tap-auth.tanzu.vmware.com                            Default roles for Tanzu Application Platform                              Default roles for Tanzu Application Platform                                      1.1.0           
+  tap-gui.tanzu.vmware.com                             Tanzu Application Platform GUI                                            web app graphical user interface for Tanzu Application Platform                   1.3.6           
+  tap-telemetry.tanzu.vmware.com                       Telemetry Collector for Tanzu Application Platform                        Tanzu Application Plaform Telemetry                                               0.3.2           
+  tap.tanzu.vmware.com                                 Tanzu Application Platform                                                Package to install a set of TAP components to get you started based on your use   1.3.8-build.4   
+                                                                                                                                 case.                                                                                             
+  tekton.tanzu.vmware.com                              Tekton Pipelines                                                          Tekton Pipelines is a framework for creating CI/CD systems.                       0.39.0+tap.4    
+  workshops.learningcenter.tanzu.vmware.com            Workshop Building Tutorial                                                Workshop Building Tutorial                                                        0.2.3           
+2023/04/27 12:12:12 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/package-funcs.go:22: installing package tap (tap.tanzu.vmware.com)
+2023/04/27 12:12:12 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:19: installing package tap (tap.tanzu.vmware.com) in namespace tap-install
+2023/04/27 12:16:29 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: tanzu package install tap -p tap.tanzu.vmware.com -v 1.3.8-build.4 -n tap-install -f /tmp/build/f3c1b5a9/source-code/suite/resources/suite/view-with-metadata-store-tap-values.yaml --poll-timeout 30m
+2023/04/27 12:16:29 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: 
+ Added installed package 'tap'
+2023/04/27 12:16:29 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:35: package tap (tap.tanzu.vmware.com) installed in namespace tap-install
+2023/04/27 12:16:29 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:36: output: 
+ Added installed package 'tap'
+2023/04/27 12:16:29 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/package-funcs.go:85: checking package tap installation status
+2023/04/27 12:16:29 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:97: getting package tap installation status in namespace tap-install
+2023/04/27 12:16:30 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: tanzu package installed get tap -n tap-install -o json
+2023/04/27 12:16:30 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: [
+  {
+    "conditions": "[{ReconcileSucceeded True  }]",
+    "name": "tap",
+    "package-name": "tap.tanzu.vmware.com",
+    "package-version": "1.3.8-build.4",
+    "status": "Reconcile succeeded",
+    "useful-error-message": ""
+  }
+]
+2023/04/27 12:16:30 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:108: package tap in namespace tap-install installation status retrieved
+2023/04/27 12:16:30 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:109: output: [
+  {
+    "conditions": "[{ReconcileSucceeded True  }]",
+    "name": "tap",
+    "package-name": "tap.tanzu.vmware.com",
+    "package-version": "1.3.8-build.4",
+    "status": "Reconcile succeeded",
+    "useful-error-message": ""
+  }
+]
+2023/04/27 12:16:30 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/package-funcs.go:100: package tap is installed
+2023/04/27 12:16:30 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/package-funcs.go:71: listing packages in namespace tap-install
+2023/04/27 12:16:30 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:79: listing packages in namespace tap-install
+2023/04/27 12:16:31 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: tanzu package installed list -n tap-install
+2023/04/27 12:16:31 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output:   NAME                      PACKAGE-NAME                               PACKAGE-VERSION  STATUS               
+  accelerator               accelerator.apps.tanzu.vmware.com          1.3.3            Reconcile succeeded  
+  api-portal                api-portal.tanzu.vmware.com                1.2.13           Reconcile succeeded  
+  appliveview               backend.appliveview.tanzu.vmware.com       1.3.1            Reconcile succeeded  
+  cert-manager              cert-manager.tanzu.vmware.com              1.7.2+tap.2      Reconcile succeeded  
+  contour                   contour.tanzu.vmware.com                   1.22.5+tap.0     Reconcile succeeded  
+  fluxcd-source-controller  fluxcd.source.controller.tanzu.vmware.com  0.27.0+tap.7     Reconcile succeeded  
+  learningcenter            learningcenter.tanzu.vmware.com            0.2.4            Reconcile succeeded  
+  learningcenter-workshops  workshops.learningcenter.tanzu.vmware.com  0.2.3            Reconcile succeeded  
+  metadata-store            metadata-store.apps.tanzu.vmware.com       1.3.8            Reconcile succeeded  
+  source-controller         controller.source.apps.tanzu.vmware.com    0.5.4            Reconcile succeeded  
+  tap                       tap.tanzu.vmware.com                       1.3.8-build.4    Reconcile succeeded  
+  tap-gui                   tap-gui.tanzu.vmware.com                   1.3.6            Reconcile succeeded  
+  tap-telemetry             tap-telemetry.tanzu.vmware.com             0.3.2            Reconcile succeeded  
+2023/04/27 12:16:31 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:89: packages updated in namespace tap-install
+2023/04/27 12:16:31 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:90: output:   NAME                      PACKAGE-NAME                               PACKAGE-VERSION  STATUS               
+  accelerator               accelerator.apps.tanzu.vmware.com          1.3.3            Reconcile succeeded  
+  api-portal                api-portal.tanzu.vmware.com                1.2.13           Reconcile succeeded  
+  appliveview               backend.appliveview.tanzu.vmware.com       1.3.1            Reconcile succeeded  
+  cert-manager              cert-manager.tanzu.vmware.com              1.7.2+tap.2      Reconcile succeeded  
+  contour                   contour.tanzu.vmware.com                   1.22.5+tap.0     Reconcile succeeded  
+  fluxcd-source-controller  fluxcd.source.controller.tanzu.vmware.com  0.27.0+tap.7     Reconcile succeeded  
+  learningcenter            learningcenter.tanzu.vmware.com            0.2.4            Reconcile succeeded  
+  learningcenter-workshops  workshops.learningcenter.tanzu.vmware.com  0.2.3            Reconcile succeeded  
+  metadata-store            metadata-store.apps.tanzu.vmware.com       1.3.8            Reconcile succeeded  
+  source-controller         controller.source.apps.tanzu.vmware.com    0.5.4            Reconcile succeeded  
+  tap                       tap.tanzu.vmware.com                       1.3.8-build.4    Reconcile succeeded  
+  tap-gui                   tap-gui.tanzu.vmware.com                   1.3.6            Reconcile succeeded  
+  tap-telemetry             tap-telemetry.tanzu.vmware.com             0.3.2            Reconcile succeeded  
+2023/04/27 12:16:31 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/config-current-context-func.go:15: changing cluster context to auto-tkgs-rkabdxiqzs-2
+2023/04/27 12:16:31 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: kubectl config use-context auto-tkgs-rkabdxiqzs-2
+2023/04/27 12:16:31 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: Switched to context "auto-tkgs-rkabdxiqzs-2".
+2023/04/27 12:16:31 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectl_helpers/kubectl-helper.go:913: Validating deployment exists, name: kapp-controller, namespace: 
+2023/04/27 12:16:31 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: kubectl get deployments -A
+2023/04/27 12:16:31 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: NAMESPACE                      NAME                           READY   UP-TO-DATE   AVAILABLE   AGE
+kapp-controller                kapp-controller                1/1     1            1           6h43m
+kube-system                    antrea-controller              1/1     1            1           7h9m
+kube-system                    antrea-resource-init           1/1     1            1           7h9m
+kube-system                    coredns                        2/2     2            2           7h10m
+kube-system                    metrics-server                 1/1     1            1           7h9m
+secretgen-controller           secretgen-controller           1/1     1            1           6h42m
+vmware-system-cloud-provider   guest-cluster-cloud-provider   1/1     1            1           7h10m
+vmware-system-csi              vsphere-csi-controller         3/3     3            3           7h10m
+2023/04/27 12:16:31 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectl_helpers/kubectl-helper.go:929: Deployment exists
+2023/04/27 12:16:31 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectl_helpers/kubectl-helper.go:913: Validating deployment exists, name: secretgen-controller, namespace: 
+2023/04/27 12:16:32 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: kubectl get deployments -A
+2023/04/27 12:16:32 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: NAMESPACE                      NAME                           READY   UP-TO-DATE   AVAILABLE   AGE
+kapp-controller                kapp-controller                1/1     1            1           6h43m
+kube-system                    antrea-controller              1/1     1            1           7h9m
+kube-system                    antrea-resource-init           1/1     1            1           7h9m
+kube-system                    coredns                        2/2     2            2           7h10m
+kube-system                    metrics-server                 1/1     1            1           7h9m
+secretgen-controller           secretgen-controller           1/1     1            1           6h42m
+vmware-system-cloud-provider   guest-cluster-cloud-provider   1/1     1            1           7h10m
+vmware-system-csi              vsphere-csi-controller         3/3     3            3           7h10m
+2023/04/27 12:16:32 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectl_helpers/kubectl-helper.go:929: Deployment exists
+2023/04/27 12:16:32 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/cluster-essentials-funcs.go:63: kapp-controller or secretgen-controller deployment exists.
+2023/04/27 12:16:32 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/namespace-funcs.go:19: creating namespaces [my-apps tap-install]
+2023/04/27 12:16:32 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:14: creating namespace my-apps
+2023/04/27 12:16:32 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: kubectl create ns my-apps
+2023/04/27 12:16:32 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: namespace/my-apps created
+2023/04/27 12:16:32 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:24: namespace my-apps created
+2023/04/27 12:16:32 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:25: output: namespace/my-apps created
+2023/04/27 12:16:32 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:14: creating namespace tap-install
+2023/04/27 12:16:32 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: kubectl create ns tap-install
+2023/04/27 12:16:32 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: namespace/tap-install created
+2023/04/27 12:16:32 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:24: namespace tap-install created
+2023/04/27 12:16:32 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:25: output: namespace/tap-install created
+2023/04/27 12:16:32 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/secret-funcs.go:19: creating secret tap-registry (registry registry.tanzu.vmware.com, username svc.bot.tap-ci@vmware.com) in namespace tap-install
+2023/04/27 12:16:32 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:224: creating secret tap-registry (registry registry.tanzu.vmware.com, username svc.bot.tap-ci@vmware.com, export true) in namespace tap-install
+2023/04/27 12:16:33 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:92: output: Warning: By choosing --export-to-all-namespaces, given secret contents will be available to ALL users in ALL namespaces. Please ensure that included registry credentials allow only read-only access to the registry with minimal necessary scope.
+
+
+
+ Added registry secret 'tap-registry' into namespace 'tap-install'
+ Exported registry secret 'tap-registry' to all namespaces
+2023/04/27 12:16:33 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:259: secret tap-registry (registry registry.tanzu.vmware.com, username svc.bot.tap-ci@vmware.com) created in namespace tap-install
+2023/04/27 12:16:33 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:260: output: Warning: By choosing --export-to-all-namespaces, given secret contents will be available to ALL users in ALL namespaces. Please ensure that included registry credentials allow only read-only access to the registry with minimal necessary scope.
+
+
+
+ Added registry secret 'tap-registry' into namespace 'tap-install'
+ Exported registry secret 'tap-registry' to all namespaces
+2023/04/27 12:16:33 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/secret-funcs.go:19: creating secret registry-credentials (registry dev.registry.tanzu.vmware.com, username svc.bot.tap-ci@vmware.com) in namespace my-apps
+2023/04/27 12:16:33 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:224: creating secret registry-credentials (registry dev.registry.tanzu.vmware.com, username svc.bot.tap-ci@vmware.com, export false) in namespace my-apps
+2023/04/27 12:16:34 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:92: output: 
+ Added registry secret 'registry-credentials' into namespace 'my-apps'
+2023/04/27 12:16:34 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:259: secret registry-credentials (registry dev.registry.tanzu.vmware.com, username svc.bot.tap-ci@vmware.com) created in namespace my-apps
+2023/04/27 12:16:34 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:260: output: 
+ Added registry secret 'registry-credentials' into namespace 'my-apps'
+2023/04/27 12:16:34 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/package-repository-funcs.go:20: adding package repository tanzu-tap-repository (registry.tanzu.vmware.com/tanzu-application-platform/tap-packages:1.3.8-build.4) in namespace tap-install
+2023/04/27 12:16:34 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:143: adding package repository tanzu-tap-repository (registry.tanzu.vmware.com/tanzu-application-platform/tap-packages:1.3.8-build.4) in namespace tap-install
+2023/04/27 12:16:49 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: tanzu package repository add tanzu-tap-repository --url registry.tanzu.vmware.com/tanzu-application-platform/tap-packages:1.3.8-build.4 -n tap-install
+2023/04/27 12:16:49 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: Added package repository 'tanzu-tap-repository' in namespace 'tap-install'
+2023/04/27 12:16:49 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:153: package repository tanzu-tap-repository (registry.tanzu.vmware.com/tanzu-application-platform/tap-packages:1.3.8-build.4) added in namespace tap-install
+2023/04/27 12:16:49 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:154: output: Added package repository 'tanzu-tap-repository' in namespace 'tap-install'
+2023/04/27 12:16:49 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/package-repository-funcs.go:54: checking package repository tanzu-tap-repository status
+2023/04/27 12:16:49 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:179: getting package repository tanzu-tap-repository status in namespace tap-install
+2023/04/27 12:16:50 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: tanzu package repository get tanzu-tap-repository -n tap-install -o json
+2023/04/27 12:16:50 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: [
+  {
+    "name": "tanzu-tap-repository",
+    "reason": "",
+    "repository": "registry.tanzu.vmware.com/tanzu-application-platform/tap-packages",
+    "status": "Reconcile succeeded",
+    "tag": "1.3.8-build.4",
+    "version": "289369"
+  }
+]
+2023/04/27 12:16:50 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:190: package repository tanzu-tap-repository in namespace tap-install status retrieved
+2023/04/27 12:16:50 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:191: output: [
+  {
+    "name": "tanzu-tap-repository",
+    "reason": "",
+    "repository": "registry.tanzu.vmware.com/tanzu-application-platform/tap-packages",
+    "status": "Reconcile succeeded",
+    "tag": "1.3.8-build.4",
+    "version": "289369"
+  }
+]
+2023/04/27 12:16:50 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/package-repository-funcs.go:69: package repository tanzu-tap-repository reconcilation succeeded
+2023/04/27 12:16:50 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/package-repository-funcs.go:70: listing all packages in the repository
+2023/04/27 12:16:50 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzu_helpers/tanzu-helpers.go:206: Listing all packages from namespace: tap-install
+2023/04/27 12:16:58 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: tanzu package available list -n tap-install
+2023/04/27 12:16:58 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output:   NAME                                                 DISPLAY-NAME                                                              SHORT-DESCRIPTION                                                                 LATEST-VERSION  
+  accelerator.apps.tanzu.vmware.com                    Application Accelerator for VMware Tanzu                                  Used to create new projects and configurations.                                   1.3.3           
+  api-portal.tanzu.vmware.com                          API portal                                                                A unified user interface for API discovery and exploration at scale.              1.2.13          
+  apis.apps.tanzu.vmware.com                           API Auto Registration for VMware Tanzu                                    A TAP component to automatically register API exposing workloads as API entities  0.1.3           
+                                                                                                                                 in TAP GUI.                                                                                       
+  backend.appliveview.tanzu.vmware.com                 Application Live View for VMware Tanzu                                    App for monitoring and troubleshooting running apps                               1.3.1           
+  buildservice.tanzu.vmware.com                        Tanzu Build Service                                                       Tanzu Build Service enables the building and automation of containerized          1.7.7           
+                                                                                                                                 software workflows securely and at scale.                                                         
+  carbonblack.scanning.apps.tanzu.vmware.com           VMware Carbon Black for Supply Chain Security Tools - Scan                Default scan templates using VMware Carbon Black                                  1.0.0-beta.2    
+  cartographer.tanzu.vmware.com                        Cartographer                                                              Kubernetes native Supply Chain Choreographer.                                     0.5.7           
+  cnrs.tanzu.vmware.com                                Cloud Native Runtimes                                                     Cloud Native Runtimes is a serverless runtime based on Knative                    2.0.4           
+  connector.appliveview.tanzu.vmware.com               Application Live View Connector for VMware Tanzu                          App for discovering and registering running apps                                  1.3.1           
+  controller.conventions.apps.tanzu.vmware.com         Convention Service for VMware Tanzu                                       Convention Service enables app operators to consistently apply desired runtime    0.7.2           
+                                                                                                                                 configurations to fleets of workloads.                                                            
+  controller.source.apps.tanzu.vmware.com              Tanzu Source Controller                                                   Tanzu Source Controller enables workload create/update from source code.          0.5.4           
+  conventions.appliveview.tanzu.vmware.com             Application Live View Conventions for VMware Tanzu                        Application Live View convention server                                           1.3.1           
+  developer-conventions.tanzu.vmware.com               Tanzu App Platform Developer Conventions                                  Developer Conventions                                                             0.8.1           
+  eventing.tanzu.vmware.com                            Eventing                                                                  Eventing is an event-driven architecture platform based on Knative Eventing       2.0.5           
+  fluxcd.source.controller.tanzu.vmware.com            Flux Source Controller                                                    The source-controller is a Kubernetes operator, specialised in artifacts          0.27.0+tap.7    
+                                                                                                                                 acquisition from external sources such as Git, Helm repositories and S3 buckets.                  
+  grype.scanning.apps.tanzu.vmware.com                 Grype for Supply Chain Security Tools - Scan                              Default scan templates using Anchore Grype                                        1.3.1           
+  image-policy-webhook.signing.apps.tanzu.vmware.com   Image Policy Webhook                                                      Image Policy Webhook enables defining of a policy to restrict unsigned container  1.1.11          
+                                                                                                                                 images.                                                                                           
+  learningcenter.tanzu.vmware.com                      Learning Center for Tanzu Application Platform                            Guided technical workshops                                                        0.2.4           
+  metadata-store.apps.tanzu.vmware.com                 Supply Chain Security Tools - Store                                       Post SBoMs and query for image, package, and vulnerability metadata.              1.3.8           
+  ootb-delivery-basic.tanzu.vmware.com                 Tanzu App Platform Out of The Box Delivery Basic                          Out of The Box Delivery Basic.                                                    0.10.9          
+  ootb-supply-chain-basic.tanzu.vmware.com             Tanzu App Platform Out of The Box Supply Chain Basic                      Out of The Box Supply Chain Basic.                                                0.10.9          
+  ootb-supply-chain-testing-scanning.tanzu.vmware.com  Tanzu App Platform Out of The Box Supply Chain with Testing and Scanning  Out of The Box Supply Chain with Testing and Scanning.                            0.10.9          
+  ootb-supply-chain-testing.tanzu.vmware.com           Tanzu App Platform Out of The Box Supply Chain with Testing               Out of The Box Supply Chain with Testing.                                         0.10.9          
+  ootb-templates.tanzu.vmware.com                      Tanzu App Platform Out of The Box Templates                               Out of The Box Templates.                                                         0.10.9          
+  policy.apps.tanzu.vmware.com                         Supply Chain Security Tools - Policy Controller                           Policy Controller enables defining of a policy to restrict unsigned container     1.1.5           
+                                                                                                                                 images.                                                                                           
+  scanning.apps.tanzu.vmware.com                       Supply Chain Security Tools - Scan                                        Scan for vulnerabilities and enforce policies directly within Kubernetes native   1.3.1           
+                                                                                                                                 Supply Chains.                                                                                    
+  service-bindings.labs.vmware.com                     Service Bindings for Kubernetes                                           Service Bindings for Kubernetes implements the Service Binding Specification.     0.8.2           
+  services-toolkit.tanzu.vmware.com                    Services Toolkit                                                          The Services Toolkit enables the management, lifecycle, discoverability and       0.8.3           
+                                                                                                                                 connectivity of Service Resources (databases, message queues, DNS records,                        
+                                                                                                                                 etc.).                                                                                            
+  snyk.scanning.apps.tanzu.vmware.com                  Snyk for Supply Chain Security Tools - Scan                               Default scan templates using Snyk                                                 1.0.0-beta.5    
+  spring-boot-conventions.tanzu.vmware.com             Tanzu Spring Boot Conventions Server                                      Default Spring Boot convention server.                                            0.5.0           
+  sso.apps.tanzu.vmware.com                            AppSSO                                                                    Application Single Sign-On for Tanzu                                              2.0.4           
+  tap-auth.tanzu.vmware.com                            Default roles for Tanzu Application Platform                              Default roles for Tanzu Application Platform                                      1.1.0           
+  tap-gui.tanzu.vmware.com                             Tanzu Application Platform GUI                                            web app graphical user interface for Tanzu Application Platform                   1.3.6           
+  tap-telemetry.tanzu.vmware.com                       Telemetry Collector for Tanzu Application Platform                        Tanzu Application Plaform Telemetry                                               0.3.2           
+  tap.tanzu.vmware.com                                 Tanzu Application Platform                                                Package to install a set of TAP components to get you started based on your use   1.3.8-build.4   
+                                                                                                                                 case.                                                                                             
+  tekton.tanzu.vmware.com                              Tekton Pipelines                                                          Tekton Pipelines is a framework for creating CI/CD systems.                       0.39.0+tap.4    
+  workshops.learningcenter.tanzu.vmware.com            Workshop Building Tutorial                                                Workshop Building Tutorial                                                        0.2.3           
+2023/04/27 12:16:58 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/package-funcs.go:22: installing package tap (tap.tanzu.vmware.com)
+2023/04/27 12:16:58 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:19: installing package tap (tap.tanzu.vmware.com) in namespace tap-install
+2023/04/27 12:22:16 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: tanzu package install tap -p tap.tanzu.vmware.com -v 1.3.8-build.4 -n tap-install -f /tmp/build/f3c1b5a9/source-code/suite/resources/suite/build-tap-values.yaml --poll-timeout 30m
+2023/04/27 12:22:16 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: 
+ Added installed package 'tap'
+2023/04/27 12:22:16 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:35: package tap (tap.tanzu.vmware.com) installed in namespace tap-install
+2023/04/27 12:22:16 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:36: output: 
+ Added installed package 'tap'
+2023/04/27 12:22:16 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/package-funcs.go:85: checking package tap installation status
+2023/04/27 12:22:16 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:97: getting package tap installation status in namespace tap-install
+2023/04/27 12:22:17 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: tanzu package installed get tap -n tap-install -o json
+2023/04/27 12:22:17 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: [
+  {
+    "conditions": "[{ReconcileSucceeded True  }]",
+    "name": "tap",
+    "package-name": "tap.tanzu.vmware.com",
+    "package-version": "1.3.8-build.4",
+    "status": "Reconcile succeeded",
+    "useful-error-message": ""
+  }
+]
+2023/04/27 12:22:17 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:108: package tap in namespace tap-install installation status retrieved
+2023/04/27 12:22:17 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:109: output: [
+  {
+    "conditions": "[{ReconcileSucceeded True  }]",
+    "name": "tap",
+    "package-name": "tap.tanzu.vmware.com",
+    "package-version": "1.3.8-build.4",
+    "status": "Reconcile succeeded",
+    "useful-error-message": ""
+  }
+]
+2023/04/27 12:22:17 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/package-funcs.go:100: package tap is installed
+2023/04/27 12:22:17 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/package-funcs.go:71: listing packages in namespace tap-install
+2023/04/27 12:22:17 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:79: listing packages in namespace tap-install
+2023/04/27 12:22:18 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: tanzu package installed list -n tap-install
+2023/04/27 12:22:18 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output:   NAME                      PACKAGE-NAME                                  PACKAGE-VERSION  STATUS               
+  appliveview-conventions   conventions.appliveview.tanzu.vmware.com      1.3.1            Reconcile succeeded  
+  buildservice              buildservice.tanzu.vmware.com                 1.7.7            Reconcile succeeded  
+  cartographer              cartographer.tanzu.vmware.com                 0.5.7            Reconcile succeeded  
+  cert-manager              cert-manager.tanzu.vmware.com                 1.7.2+tap.2      Reconcile succeeded  
+  contour                   contour.tanzu.vmware.com                      1.22.5+tap.0     Reconcile succeeded  
+  conventions-controller    controller.conventions.apps.tanzu.vmware.com  0.7.2            Reconcile succeeded  
+  fluxcd-source-controller  fluxcd.source.controller.tanzu.vmware.com     0.27.0+tap.7     Reconcile succeeded  
+  grype                     grype.scanning.apps.tanzu.vmware.com          1.3.1            Reconcile succeeded  
+  ootb-supply-chain-basic   ootb-supply-chain-basic.tanzu.vmware.com      0.10.9           Reconcile succeeded  
+  ootb-templates            ootb-templates.tanzu.vmware.com               0.10.9           Reconcile succeeded  
+  scanning                  scanning.apps.tanzu.vmware.com                1.3.1            Reconcile succeeded  
+  source-controller         controller.source.apps.tanzu.vmware.com       0.5.4            Reconcile succeeded  
+  spring-boot-conventions   spring-boot-conventions.tanzu.vmware.com      0.5.0            Reconcile succeeded  
+  tap                       tap.tanzu.vmware.com                          1.3.8-build.4    Reconcile succeeded  
+  tap-auth                  tap-auth.tanzu.vmware.com                     1.1.0            Reconcile succeeded  
+  tap-telemetry             tap-telemetry.tanzu.vmware.com                0.3.2            Reconcile succeeded  
+  tekton-pipelines          tekton.tanzu.vmware.com                       0.39.0+tap.4     Reconcile succeeded  
+2023/04/27 12:22:18 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:89: packages updated in namespace tap-install
+2023/04/27 12:22:18 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:90: output:   NAME                      PACKAGE-NAME                                  PACKAGE-VERSION  STATUS               
+  appliveview-conventions   conventions.appliveview.tanzu.vmware.com      1.3.1            Reconcile succeeded  
+  buildservice              buildservice.tanzu.vmware.com                 1.7.7            Reconcile succeeded  
+  cartographer              cartographer.tanzu.vmware.com                 0.5.7            Reconcile succeeded  
+  cert-manager              cert-manager.tanzu.vmware.com                 1.7.2+tap.2      Reconcile succeeded  
+  contour                   contour.tanzu.vmware.com                      1.22.5+tap.0     Reconcile succeeded  
+  conventions-controller    controller.conventions.apps.tanzu.vmware.com  0.7.2            Reconcile succeeded  
+  fluxcd-source-controller  fluxcd.source.controller.tanzu.vmware.com     0.27.0+tap.7     Reconcile succeeded  
+  grype                     grype.scanning.apps.tanzu.vmware.com          1.3.1            Reconcile succeeded  
+  ootb-supply-chain-basic   ootb-supply-chain-basic.tanzu.vmware.com      0.10.9           Reconcile succeeded  
+  ootb-templates            ootb-templates.tanzu.vmware.com               0.10.9           Reconcile succeeded  
+  scanning                  scanning.apps.tanzu.vmware.com                1.3.1            Reconcile succeeded  
+  source-controller         controller.source.apps.tanzu.vmware.com       0.5.4            Reconcile succeeded  
+  spring-boot-conventions   spring-boot-conventions.tanzu.vmware.com      0.5.0            Reconcile succeeded  
+  tap                       tap.tanzu.vmware.com                          1.3.8-build.4    Reconcile succeeded  
+  tap-auth                  tap-auth.tanzu.vmware.com                     1.1.0            Reconcile succeeded  
+  tap-telemetry             tap-telemetry.tanzu.vmware.com                0.3.2            Reconcile succeeded  
+  tekton-pipelines          tekton.tanzu.vmware.com                       0.39.0+tap.4     Reconcile succeeded  
+2023/04/27 12:22:18 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/namespace-funcs.go:67: setting up developer namespace my-apps
+2023/04/27 12:22:18 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:50: applying configuration /tmp/build/f3c1b5a9/source-code/suite/resources/suite/developer-namespace.yaml in namespace my-apps
+2023/04/27 12:22:22 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: kubectl apply -n my-apps -f /tmp/build/f3c1b5a9/source-code/suite/resources/suite/developer-namespace.yaml
+2023/04/27 12:22:22 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: secret/tap-registry created
+Warning: resource serviceaccounts/default is missing the kubectl.kubernetes.io/last-applied-configuration annotation which is required by kubectl apply. kubectl apply should only be used on resources created declaratively by either kubectl create --save-config or kubectl apply. The missing annotation will be patched automatically.
+serviceaccount/default configured
+rolebinding.rbac.authorization.k8s.io/default-permit-deliverable created
+rolebinding.rbac.authorization.k8s.io/default-permit-workload created
+2023/04/27 12:22:22 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:60: configuration /tmp/build/f3c1b5a9/source-code/suite/resources/suite/developer-namespace.yaml applied in namespace my-apps
+2023/04/27 12:22:22 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:61: output: secret/tap-registry created
+Warning: resource serviceaccounts/default is missing the kubectl.kubernetes.io/last-applied-configuration annotation which is required by kubectl apply. kubectl apply should only be used on resources created declaratively by either kubectl create --save-config or kubectl apply. The missing annotation will be patched automatically.
+serviceaccount/default configured
+rolebinding.rbac.authorization.k8s.io/default-permit-deliverable created
+rolebinding.rbac.authorization.k8s.io/default-permit-workload created
+2023/04/27 12:22:22 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/config-current-context-func.go:15: changing cluster context to auto-tkgs-rkabdxiqzs-3
+2023/04/27 12:22:22 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: kubectl config use-context auto-tkgs-rkabdxiqzs-3
+2023/04/27 12:22:22 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: Switched to context "auto-tkgs-rkabdxiqzs-3".
+2023/04/27 12:22:22 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectl_helpers/kubectl-helper.go:913: Validating deployment exists, name: kapp-controller, namespace: 
+2023/04/27 12:22:23 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: kubectl get deployments -A
+2023/04/27 12:22:23 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: NAMESPACE                      NAME                           READY   UP-TO-DATE   AVAILABLE   AGE
+kapp-controller                kapp-controller                1/1     1            1           5h7m
+kube-system                    antrea-controller              1/1     1            1           7h15m
+kube-system                    antrea-resource-init           1/1     1            1           7h15m
+kube-system                    coredns                        2/2     2            2           7h16m
+kube-system                    metrics-server                 1/1     1            1           7h15m
+rabbitmq-system                rabbitmq-cluster-operator      1/1     1            1           161m
+secretgen-controller           secretgen-controller           1/1     1            1           5h6m
+vmware-system-cloud-provider   guest-cluster-cloud-provider   1/1     1            1           7h16m
+vmware-system-csi              vsphere-csi-controller         3/3     3            3           7h16m
+2023/04/27 12:22:23 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectl_helpers/kubectl-helper.go:929: Deployment exists
+2023/04/27 12:22:23 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectl_helpers/kubectl-helper.go:913: Validating deployment exists, name: secretgen-controller, namespace: 
+2023/04/27 12:22:23 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: kubectl get deployments -A
+2023/04/27 12:22:23 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: NAMESPACE                      NAME                           READY   UP-TO-DATE   AVAILABLE   AGE
+kapp-controller                kapp-controller                1/1     1            1           5h7m
+kube-system                    antrea-controller              1/1     1            1           7h15m
+kube-system                    antrea-resource-init           1/1     1            1           7h15m
+kube-system                    coredns                        2/2     2            2           7h16m
+kube-system                    metrics-server                 1/1     1            1           7h15m
+rabbitmq-system                rabbitmq-cluster-operator      1/1     1            1           161m
+secretgen-controller           secretgen-controller           1/1     1            1           5h6m
+vmware-system-cloud-provider   guest-cluster-cloud-provider   1/1     1            1           7h16m
+vmware-system-csi              vsphere-csi-controller         3/3     3            3           7h16m
+2023/04/27 12:22:23 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectl_helpers/kubectl-helper.go:929: Deployment exists
+2023/04/27 12:22:23 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/cluster-essentials-funcs.go:63: kapp-controller or secretgen-controller deployment exists.
+2023/04/27 12:22:23 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/namespace-funcs.go:19: creating namespaces [my-apps tap-install]
+2023/04/27 12:22:23 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:14: creating namespace my-apps
+2023/04/27 12:22:23 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: kubectl create ns my-apps
+2023/04/27 12:22:23 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: namespace/my-apps created
+2023/04/27 12:22:23 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:24: namespace my-apps created
+2023/04/27 12:22:23 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:25: output: namespace/my-apps created
+2023/04/27 12:22:23 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:14: creating namespace tap-install
+2023/04/27 12:22:24 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: kubectl create ns tap-install
+2023/04/27 12:22:24 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: namespace/tap-install created
+2023/04/27 12:22:24 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:24: namespace tap-install created
+2023/04/27 12:22:24 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:25: output: namespace/tap-install created
+2023/04/27 12:22:24 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/secret-funcs.go:19: creating secret tap-registry (registry registry.tanzu.vmware.com, username svc.bot.tap-ci@vmware.com) in namespace tap-install
+2023/04/27 12:22:24 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:224: creating secret tap-registry (registry registry.tanzu.vmware.com, username svc.bot.tap-ci@vmware.com, export true) in namespace tap-install
+2023/04/27 12:22:24 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:92: output: Warning: By choosing --export-to-all-namespaces, given secret contents will be available to ALL users in ALL namespaces. Please ensure that included registry credentials allow only read-only access to the registry with minimal necessary scope.
+
+
+
+ Added registry secret 'tap-registry' into namespace 'tap-install'
+ Exported registry secret 'tap-registry' to all namespaces
+2023/04/27 12:22:24 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:259: secret tap-registry (registry registry.tanzu.vmware.com, username svc.bot.tap-ci@vmware.com) created in namespace tap-install
+2023/04/27 12:22:24 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:260: output: Warning: By choosing --export-to-all-namespaces, given secret contents will be available to ALL users in ALL namespaces. Please ensure that included registry credentials allow only read-only access to the registry with minimal necessary scope.
+
+
+
+ Added registry secret 'tap-registry' into namespace 'tap-install'
+ Exported registry secret 'tap-registry' to all namespaces
+2023/04/27 12:22:24 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/secret-funcs.go:19: creating secret registry-credentials (registry dev.registry.tanzu.vmware.com, username svc.bot.tap-ci@vmware.com) in namespace my-apps
+2023/04/27 12:22:24 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:224: creating secret registry-credentials (registry dev.registry.tanzu.vmware.com, username svc.bot.tap-ci@vmware.com, export false) in namespace my-apps
+2023/04/27 12:22:25 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:92: output: 
+ Added registry secret 'registry-credentials' into namespace 'my-apps'
+2023/04/27 12:22:25 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:259: secret registry-credentials (registry dev.registry.tanzu.vmware.com, username svc.bot.tap-ci@vmware.com) created in namespace my-apps
+2023/04/27 12:22:25 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:260: output: 
+ Added registry secret 'registry-credentials' into namespace 'my-apps'
+2023/04/27 12:22:25 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/package-repository-funcs.go:20: adding package repository tanzu-tap-repository (registry.tanzu.vmware.com/tanzu-application-platform/tap-packages:1.3.8-build.4) in namespace tap-install
+2023/04/27 12:22:25 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:143: adding package repository tanzu-tap-repository (registry.tanzu.vmware.com/tanzu-application-platform/tap-packages:1.3.8-build.4) in namespace tap-install
+2023/04/27 12:22:36 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: tanzu package repository add tanzu-tap-repository --url registry.tanzu.vmware.com/tanzu-application-platform/tap-packages:1.3.8-build.4 -n tap-install
+2023/04/27 12:22:36 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: Added package repository 'tanzu-tap-repository' in namespace 'tap-install'
+2023/04/27 12:22:36 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:153: package repository tanzu-tap-repository (registry.tanzu.vmware.com/tanzu-application-platform/tap-packages:1.3.8-build.4) added in namespace tap-install
+2023/04/27 12:22:36 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:154: output: Added package repository 'tanzu-tap-repository' in namespace 'tap-install'
+2023/04/27 12:22:36 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/package-repository-funcs.go:54: checking package repository tanzu-tap-repository status
+2023/04/27 12:22:36 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:179: getting package repository tanzu-tap-repository status in namespace tap-install
+2023/04/27 12:22:37 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: tanzu package repository get tanzu-tap-repository -n tap-install -o json
+2023/04/27 12:22:37 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: [
+  {
+    "name": "tanzu-tap-repository",
+    "reason": "",
+    "repository": "registry.tanzu.vmware.com/tanzu-application-platform/tap-packages",
+    "status": "Reconcile succeeded",
+    "tag": "1.3.8-build.4",
+    "version": "416028"
+  }
+]
+2023/04/27 12:22:37 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:190: package repository tanzu-tap-repository in namespace tap-install status retrieved
+2023/04/27 12:22:37 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:191: output: [
+  {
+    "name": "tanzu-tap-repository",
+    "reason": "",
+    "repository": "registry.tanzu.vmware.com/tanzu-application-platform/tap-packages",
+    "status": "Reconcile succeeded",
+    "tag": "1.3.8-build.4",
+    "version": "416028"
+  }
+]
+2023/04/27 12:22:37 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/package-repository-funcs.go:69: package repository tanzu-tap-repository reconcilation succeeded
+2023/04/27 12:22:37 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/package-repository-funcs.go:70: listing all packages in the repository
+2023/04/27 12:22:37 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzu_helpers/tanzu-helpers.go:206: Listing all packages from namespace: tap-install
+2023/04/27 12:22:44 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: tanzu package available list -n tap-install
+2023/04/27 12:22:44 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output:   NAME                                                 DISPLAY-NAME                                                              SHORT-DESCRIPTION                                                                 LATEST-VERSION  
+  accelerator.apps.tanzu.vmware.com                    Application Accelerator for VMware Tanzu                                  Used to create new projects and configurations.                                   1.3.3           
+  api-portal.tanzu.vmware.com                          API portal                                                                A unified user interface for API discovery and exploration at scale.              1.2.13          
+  apis.apps.tanzu.vmware.com                           API Auto Registration for VMware Tanzu                                    A TAP component to automatically register API exposing workloads as API entities  0.1.3           
+                                                                                                                                 in TAP GUI.                                                                                       
+  backend.appliveview.tanzu.vmware.com                 Application Live View for VMware Tanzu                                    App for monitoring and troubleshooting running apps                               1.3.1           
+  buildservice.tanzu.vmware.com                        Tanzu Build Service                                                       Tanzu Build Service enables the building and automation of containerized          1.7.7           
+                                                                                                                                 software workflows securely and at scale.                                                         
+  carbonblack.scanning.apps.tanzu.vmware.com           VMware Carbon Black for Supply Chain Security Tools - Scan                Default scan templates using VMware Carbon Black                                  1.0.0-beta.2    
+  cartographer.tanzu.vmware.com                        Cartographer                                                              Kubernetes native Supply Chain Choreographer.                                     0.5.7           
+  cnrs.tanzu.vmware.com                                Cloud Native Runtimes                                                     Cloud Native Runtimes is a serverless runtime based on Knative                    2.0.4           
+  connector.appliveview.tanzu.vmware.com               Application Live View Connector for VMware Tanzu                          App for discovering and registering running apps                                  1.3.1           
+  controller.conventions.apps.tanzu.vmware.com         Convention Service for VMware Tanzu                                       Convention Service enables app operators to consistently apply desired runtime    0.7.2           
+                                                                                                                                 configurations to fleets of workloads.                                                            
+  controller.source.apps.tanzu.vmware.com              Tanzu Source Controller                                                   Tanzu Source Controller enables workload create/update from source code.          0.5.4           
+  conventions.appliveview.tanzu.vmware.com             Application Live View Conventions for VMware Tanzu                        Application Live View convention server                                           1.3.1           
+  developer-conventions.tanzu.vmware.com               Tanzu App Platform Developer Conventions                                  Developer Conventions                                                             0.8.1           
+  eventing.tanzu.vmware.com                            Eventing                                                                  Eventing is an event-driven architecture platform based on Knative Eventing       2.0.5           
+  fluxcd.source.controller.tanzu.vmware.com            Flux Source Controller                                                    The source-controller is a Kubernetes operator, specialised in artifacts          0.27.0+tap.7    
+                                                                                                                                 acquisition from external sources such as Git, Helm repositories and S3 buckets.                  
+  grype.scanning.apps.tanzu.vmware.com                 Grype for Supply Chain Security Tools - Scan                              Default scan templates using Anchore Grype                                        1.3.1           
+  image-policy-webhook.signing.apps.tanzu.vmware.com   Image Policy Webhook                                                      Image Policy Webhook enables defining of a policy to restrict unsigned container  1.1.11          
+                                                                                                                                 images.                                                                                           
+  learningcenter.tanzu.vmware.com                      Learning Center for Tanzu Application Platform                            Guided technical workshops                                                        0.2.4           
+  metadata-store.apps.tanzu.vmware.com                 Supply Chain Security Tools - Store                                       Post SBoMs and query for image, package, and vulnerability metadata.              1.3.8           
+  ootb-delivery-basic.tanzu.vmware.com                 Tanzu App Platform Out of The Box Delivery Basic                          Out of The Box Delivery Basic.                                                    0.10.9          
+  ootb-supply-chain-basic.tanzu.vmware.com             Tanzu App Platform Out of The Box Supply Chain Basic                      Out of The Box Supply Chain Basic.                                                0.10.9          
+  ootb-supply-chain-testing-scanning.tanzu.vmware.com  Tanzu App Platform Out of The Box Supply Chain with Testing and Scanning  Out of The Box Supply Chain with Testing and Scanning.                            0.10.9          
+  ootb-supply-chain-testing.tanzu.vmware.com           Tanzu App Platform Out of The Box Supply Chain with Testing               Out of The Box Supply Chain with Testing.                                         0.10.9          
+  ootb-templates.tanzu.vmware.com                      Tanzu App Platform Out of The Box Templates                               Out of The Box Templates.                                                         0.10.9          
+  policy.apps.tanzu.vmware.com                         Supply Chain Security Tools - Policy Controller                           Policy Controller enables defining of a policy to restrict unsigned container     1.1.5           
+                                                                                                                                 images.                                                                                           
+  scanning.apps.tanzu.vmware.com                       Supply Chain Security Tools - Scan                                        Scan for vulnerabilities and enforce policies directly within Kubernetes native   1.3.1           
+                                                                                                                                 Supply Chains.                                                                                    
+  service-bindings.labs.vmware.com                     Service Bindings for Kubernetes                                           Service Bindings for Kubernetes implements the Service Binding Specification.     0.8.2           
+  services-toolkit.tanzu.vmware.com                    Services Toolkit                                                          The Services Toolkit enables the management, lifecycle, discoverability and       0.8.3           
+                                                                                                                                 connectivity of Service Resources (databases, message queues, DNS records,                        
+                                                                                                                                 etc.).                                                                                            
+  snyk.scanning.apps.tanzu.vmware.com                  Snyk for Supply Chain Security Tools - Scan                               Default scan templates using Snyk                                                 1.0.0-beta.5    
+  spring-boot-conventions.tanzu.vmware.com             Tanzu Spring Boot Conventions Server                                      Default Spring Boot convention server.                                            0.5.0           
+  sso.apps.tanzu.vmware.com                            AppSSO                                                                    Application Single Sign-On for Tanzu                                              2.0.4           
+  tap-auth.tanzu.vmware.com                            Default roles for Tanzu Application Platform                              Default roles for Tanzu Application Platform                                      1.1.0           
+  tap-gui.tanzu.vmware.com                             Tanzu Application Platform GUI                                            web app graphical user interface for Tanzu Application Platform                   1.3.6           
+  tap-telemetry.tanzu.vmware.com                       Telemetry Collector for Tanzu Application Platform                        Tanzu Application Plaform Telemetry                                               0.3.2           
+  tap.tanzu.vmware.com                                 Tanzu Application Platform                                                Package to install a set of TAP components to get you started based on your use   1.3.8-build.4   
+                                                                                                                                 case.                                                                                             
+  tekton.tanzu.vmware.com                              Tekton Pipelines                                                          Tekton Pipelines is a framework for creating CI/CD systems.                       0.39.0+tap.4    
+  workshops.learningcenter.tanzu.vmware.com            Workshop Building Tutorial                                                Workshop Building Tutorial                                                        0.2.3           
+2023/04/27 12:22:44 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/package-funcs.go:22: installing package tap (tap.tanzu.vmware.com)
+2023/04/27 12:22:44 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:19: installing package tap (tap.tanzu.vmware.com) in namespace tap-install
+2023/04/27 12:25:55 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: tanzu package install tap -p tap.tanzu.vmware.com -v 1.3.8-build.4 -n tap-install -f /tmp/build/f3c1b5a9/source-code/suite/resources/suite/run-tap-values.yaml --poll-timeout 30m
+2023/04/27 12:25:55 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: 
+ Added installed package 'tap'
+2023/04/27 12:25:55 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:35: package tap (tap.tanzu.vmware.com) installed in namespace tap-install
+2023/04/27 12:25:55 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:36: output: 
+ Added installed package 'tap'
+2023/04/27 12:25:55 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/package-funcs.go:85: checking package tap installation status
+2023/04/27 12:25:55 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:97: getting package tap installation status in namespace tap-install
+2023/04/27 12:25:56 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: tanzu package installed get tap -n tap-install -o json
+2023/04/27 12:25:56 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: [
+  {
+    "conditions": "[{ReconcileSucceeded True  }]",
+    "name": "tap",
+    "package-name": "tap.tanzu.vmware.com",
+    "package-version": "1.3.8-build.4",
+    "status": "Reconcile succeeded",
+    "useful-error-message": ""
+  }
+]
+2023/04/27 12:25:56 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:108: package tap in namespace tap-install installation status retrieved
+2023/04/27 12:25:56 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:109: output: [
+  {
+    "conditions": "[{ReconcileSucceeded True  }]",
+    "name": "tap",
+    "package-name": "tap.tanzu.vmware.com",
+    "package-version": "1.3.8-build.4",
+    "status": "Reconcile succeeded",
+    "useful-error-message": ""
+  }
+]
+2023/04/27 12:25:56 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/package-funcs.go:100: package tap is installed
+2023/04/27 12:25:56 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/package-funcs.go:71: listing packages in namespace tap-install
+2023/04/27 12:25:56 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:79: listing packages in namespace tap-install
+2023/04/27 12:25:57 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: tanzu package installed list -n tap-install
+2023/04/27 12:25:57 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output:   NAME                      PACKAGE-NAME                                        PACKAGE-VERSION  STATUS               
+  api-auto-registration     apis.apps.tanzu.vmware.com                          0.1.3            Reconcile succeeded  
+  appliveview-connector     connector.appliveview.tanzu.vmware.com              1.3.1            Reconcile succeeded  
+  appsso                    sso.apps.tanzu.vmware.com                           2.0.4            Reconcile succeeded  
+  cartographer              cartographer.tanzu.vmware.com                       0.5.7            Reconcile succeeded  
+  cert-manager              cert-manager.tanzu.vmware.com                       1.7.2+tap.2      Reconcile succeeded  
+  cnrs                      cnrs.tanzu.vmware.com                               2.0.4            Reconcile succeeded  
+  contour                   contour.tanzu.vmware.com                            1.22.5+tap.0     Reconcile succeeded  
+  eventing                  eventing.tanzu.vmware.com                           2.0.5            Reconcile succeeded  
+  fluxcd-source-controller  fluxcd.source.controller.tanzu.vmware.com           0.27.0+tap.7     Reconcile succeeded  
+  image-policy-webhook      image-policy-webhook.signing.apps.tanzu.vmware.com  1.1.11           Reconcile succeeded  
+  ootb-delivery-basic       ootb-delivery-basic.tanzu.vmware.com                0.10.9           Reconcile succeeded  
+  ootb-templates            ootb-templates.tanzu.vmware.com                     0.10.9           Reconcile succeeded  
+  policy-controller         policy.apps.tanzu.vmware.com                        1.1.5            Reconcile succeeded  
+  service-bindings          service-bindings.labs.vmware.com                    0.8.2            Reconcile succeeded  
+  services-toolkit          services-toolkit.tanzu.vmware.com                   0.8.3            Reconcile succeeded  
+  source-controller         controller.source.apps.tanzu.vmware.com             0.5.4            Reconcile succeeded  
+  tap                       tap.tanzu.vmware.com                                1.3.8-build.4    Reconcile succeeded  
+  tap-auth                  tap-auth.tanzu.vmware.com                           1.1.0            Reconcile succeeded  
+  tap-telemetry             tap-telemetry.tanzu.vmware.com                      0.3.2            Reconcile succeeded  
+2023/04/27 12:25:57 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:89: packages updated in namespace tap-install
+2023/04/27 12:25:57 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:90: output:   NAME                      PACKAGE-NAME                                        PACKAGE-VERSION  STATUS               
+  api-auto-registration     apis.apps.tanzu.vmware.com                          0.1.3            Reconcile succeeded  
+  appliveview-connector     connector.appliveview.tanzu.vmware.com              1.3.1            Reconcile succeeded  
+  appsso                    sso.apps.tanzu.vmware.com                           2.0.4            Reconcile succeeded  
+  cartographer              cartographer.tanzu.vmware.com                       0.5.7            Reconcile succeeded  
+  cert-manager              cert-manager.tanzu.vmware.com                       1.7.2+tap.2      Reconcile succeeded  
+  cnrs                      cnrs.tanzu.vmware.com                               2.0.4            Reconcile succeeded  
+  contour                   contour.tanzu.vmware.com                            1.22.5+tap.0     Reconcile succeeded  
+  eventing                  eventing.tanzu.vmware.com                           2.0.5            Reconcile succeeded  
+  fluxcd-source-controller  fluxcd.source.controller.tanzu.vmware.com           0.27.0+tap.7     Reconcile succeeded  
+  image-policy-webhook      image-policy-webhook.signing.apps.tanzu.vmware.com  1.1.11           Reconcile succeeded  
+  ootb-delivery-basic       ootb-delivery-basic.tanzu.vmware.com                0.10.9           Reconcile succeeded  
+  ootb-templates            ootb-templates.tanzu.vmware.com                     0.10.9           Reconcile succeeded  
+  policy-controller         policy.apps.tanzu.vmware.com                        1.1.5            Reconcile succeeded  
+  service-bindings          service-bindings.labs.vmware.com                    0.8.2            Reconcile succeeded  
+  services-toolkit          services-toolkit.tanzu.vmware.com                   0.8.3            Reconcile succeeded  
+  source-controller         controller.source.apps.tanzu.vmware.com             0.5.4            Reconcile succeeded  
+  tap                       tap.tanzu.vmware.com                                1.3.8-build.4    Reconcile succeeded  
+  tap-auth                  tap-auth.tanzu.vmware.com                           1.1.0            Reconcile succeeded  
+  tap-telemetry             tap-telemetry.tanzu.vmware.com                      0.3.2            Reconcile succeeded  
+2023/04/27 12:25:57 /tmp/build/f3c1b5a9/source-code/suite/envfuncs/namespace-funcs.go:67: setting up developer namespace my-apps
+2023/04/27 12:25:57 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:50: applying configuration /tmp/build/f3c1b5a9/source-code/suite/resources/suite/developer-namespace.yaml in namespace my-apps
+2023/04/27 12:26:00 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: kubectl apply -n my-apps -f /tmp/build/f3c1b5a9/source-code/suite/resources/suite/developer-namespace.yaml
+2023/04/27 12:26:00 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: secret/tap-registry created
+Warning: resource serviceaccounts/default is missing the kubectl.kubernetes.io/last-applied-configuration annotation which is required by kubectl apply. kubectl apply should only be used on resources created declaratively by either kubectl create --save-config or kubectl apply. The missing annotation will be patched automatically.
+serviceaccount/default configured
+rolebinding.rbac.authorization.k8s.io/default-permit-deliverable created
+rolebinding.rbac.authorization.k8s.io/default-permit-workload created
+2023/04/27 12:26:00 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:60: configuration /tmp/build/f3c1b5a9/source-code/suite/resources/suite/developer-namespace.yaml applied in namespace my-apps
+2023/04/27 12:26:00 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:61: output: secret/tap-registry created
+Warning: resource serviceaccounts/default is missing the kubectl.kubernetes.io/last-applied-configuration annotation which is required by kubectl apply. kubectl apply should only be used on resources created declaratively by either kubectl create --save-config or kubectl apply. The missing annotation will be patched automatically.
+serviceaccount/default configured
+rolebinding.rbac.authorization.k8s.io/default-permit-deliverable created
+rolebinding.rbac.authorization.k8s.io/default-permit-workload created
+2023/04/27 12:26:00 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: kubectl config use-context auto-tkgs-rkabdxiqzs
+2023/04/27 12:26:00 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: Switched to context "auto-tkgs-rkabdxiqzs".
+2023/04/27 12:26:01 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:148: command executed: wget https://github.com/sample-accelerators/python-functions-accelerator/archive/refs/heads/main.zip
+2023/04/27 12:26:01 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:153: output: --2023-04-27 12:26:00--  https://github.com/sample-accelerators/python-functions-accelerator/archive/refs/heads/main.zip
+Resolving github.com (github.com)... 192.30.255.113
+Connecting to github.com (github.com)|192.30.255.113|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://codeload.github.com/sample-accelerators/python-functions-accelerator/zip/refs/heads/main [following]
+--2023-04-27 12:26:01--  https://codeload.github.com/sample-accelerators/python-functions-accelerator/zip/refs/heads/main
+Resolving codeload.github.com (codeload.github.com)... 192.30.255.120
+Connecting to codeload.github.com (codeload.github.com)|192.30.255.120|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/zip]
+Saving to: 'main.zip'
+
+     0K .......... .......... .......... .......... ...        1.02M=0.04s
+
+2023-04-27 12:26:01 (1.02 MB/s) - 'main.zip' saved [44581]
+
+2023/04/27 12:26:01 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:148: command executed: ls | grep main.zip
+2023/04/27 12:26:01 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:153: output: main.zip
+2023/04/27 12:26:01 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:148: command executed: unzip main.zip
+2023/04/27 12:26:01 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:153: output: Archive:  main.zip
+f547878ea057384b0e579890ff25034477557875
+   creating: python-functions-accelerator-main/
+  inflating: python-functions-accelerator-main/DEPLOYING.md  
+  inflating: python-functions-accelerator-main/LICENSE  
+  inflating: python-functions-accelerator-main/README.md  
+  inflating: python-functions-accelerator-main/SECURITY.md  
+  inflating: python-functions-accelerator-main/accelerator.yaml  
+   creating: python-functions-accelerator-main/catalog/
+  inflating: python-functions-accelerator-main/catalog/catalog-info.yaml  
+   creating: python-functions-accelerator-main/cloudevents/
+  inflating: python-functions-accelerator-main/cloudevents/func.py  
+   creating: python-functions-accelerator-main/config/
+  inflating: python-functions-accelerator-main/config/workload.yaml  
+  inflating: python-functions-accelerator-main/func.py  
+  inflating: python-functions-accelerator-main/func.yaml  
+  inflating: python-functions-accelerator-main/functions-icon.png  
+  inflating: python-functions-accelerator-main/k8s-resource.yaml  
+  inflating: python-functions-accelerator-main/manifest.yaml  
+ extracting: python-functions-accelerator-main/requirements.txt  
+2023/04/27 12:26:01 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:148: command executed: rm main.zip
+2023/04/27 12:26:01 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:153: output: 
+2023/04/27 12:26:01 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:50: applying configuration ./python-functions-accelerator-main/k8s-resource.yaml in namespace accelerator-system
+2023/04/27 12:26:03 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: kubectl apply -n accelerator-system -f ./python-functions-accelerator-main/k8s-resource.yaml
+2023/04/27 12:26:03 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: Warning: resource accelerators/python-function is missing the kubectl.kubernetes.io/last-applied-configuration annotation which is required by kubectl apply. kubectl apply should only be used on resources created declaratively by either kubectl create --save-config or kubectl apply. The missing annotation will be patched automatically.
+accelerator.accelerator.apps.tanzu.vmware.com/python-function configured
+2023/04/27 12:26:03 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:60: configuration ./python-functions-accelerator-main/k8s-resource.yaml applied in namespace accelerator-system
+2023/04/27 12:26:03 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectlCmds/kubectl-commands.go:61: output: Warning: resource accelerators/python-function is missing the kubectl.kubernetes.io/last-applied-configuration annotation which is required by kubectl apply. kubectl apply should only be used on resources created declaratively by either kubectl create --save-config or kubectl apply. The missing annotation will be patched automatically.
+accelerator.accelerator.apps.tanzu.vmware.com/python-function configured
+2023/04/27 12:26:03 /tmp/build/f3c1b5a9/source-code/suite/tap_test/models/tapValuesSchema.go:181: getting tap values schema
+2023/04/27 12:26:03 /tmp/build/f3c1b5a9/source-code/suite/tap_test/models/tapValuesSchema.go:205: read tap values schema file /tmp/build/f3c1b5a9/source-code/suite/resources/suite/view-tap-values.yaml
+2023/04/27 12:26:03 /tmp/build/f3c1b5a9/source-code/suite/tap_test/models/tapValuesSchema.go:215: unmarshalled file /tmp/build/f3c1b5a9/source-code/suite/resources/suite/view-tap-values.yaml
+2023/04/27 12:26:03 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzu_helpers/tanzu-helpers.go:148: creating tempfile for tap values schema
+2023/04/27 12:26:03 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzu_helpers/tanzu-helpers.go:154: created tempfile
+2023/04/27 12:26:03 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/utils.go:25: creating YAML file /tmp/tap-values1412297794.yaml from input
+2023/04/27 12:26:03 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/utils.go:34: marshalled input {{{LoadBalancer}} {  } %!s(bool=true) {{{LoadBalancer }}} {  { { } { }}} {educates.tanzu.vmwware.com} { {} { } {{ }}} {{} { }} {{} { } {{ }}} view testing_scanning {LoadBalancer %!s(bool=false) {{} {[]} { {}} {{} []}}} {{ { } { }}} { } {} []}
+2023/04/27 12:26:03 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/utils.go:43: file /tmp/tap-values1412297794.yaml written
+2023/04/27 12:26:03 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzu_helpers/tanzu-helpers.go:164: wrote tap values schema to file
+2023/04/27 12:26:05 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: tanzu package installed update tap --namespace tap-install --package-name tap.tanzu.vmware.com --version 1.3.8-build.4 --values-file /tmp/tap-values1412297794.yaml
+2023/04/27 12:26:05 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: Updated installed package 'tap' in namespace 'tap-install'
+2023/04/27 12:26:05 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzu_libs/package-installed.go:151: package tap (tap.tanzu.vmware.com) updated in namespace tap-install
+2023/04/27 12:26:05 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzu_libs/package-installed.go:152: output: Updated installed package 'tap' in namespace 'tap-install'
+2023/04/27 12:26:05 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzu_helpers/tanzu-helpers.go:173: updated tap
+2023/04/27 12:26:05 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzu_helpers/tanzu-helpers.go:176: sleeping for 2 mins to stablize tap components reconciling state......
+2023/04/27 12:28:05 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzu_helpers/tanzu-helpers.go:66: Executing: ValidateInstalledPackageStatus
+2023/04/27 12:28:06 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: tanzu package installed get tap -n tap-install -o json
+2023/04/27 12:28:06 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: [
+  {
+    "conditions": "[{ReconcileSucceeded True  }]",
+    "name": "tap",
+    "package-name": "tap.tanzu.vmware.com",
+    "package-version": "1.3.8-build.4",
+    "status": "Reconcile succeeded",
+    "useful-error-message": ""
+  }
+]
+2023/04/27 12:28:06 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzu_helpers/tanzu-helpers.go:75: Package tap version 1.3.8-build.4 installation is verified successfully.
+2023/04/27 12:28:07 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: tanzu package installed list -n tap-install
+2023/04/27 12:28:07 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output:   NAME                      PACKAGE-NAME                               PACKAGE-VERSION  STATUS               
+  accelerator               accelerator.apps.tanzu.vmware.com          1.3.3            Reconcile succeeded  
+  api-portal                api-portal.tanzu.vmware.com                1.2.13           Reconcile succeeded  
+  appliveview               backend.appliveview.tanzu.vmware.com       1.3.1            Reconcile succeeded  
+  cert-manager              cert-manager.tanzu.vmware.com              1.7.2+tap.2      Reconcile succeeded  
+  contour                   contour.tanzu.vmware.com                   1.22.5+tap.0     Reconcile succeeded  
+  fluxcd-source-controller  fluxcd.source.controller.tanzu.vmware.com  0.27.0+tap.7     Reconcile succeeded  
+  learningcenter            learningcenter.tanzu.vmware.com            0.2.4            Reconcile succeeded  
+  learningcenter-workshops  workshops.learningcenter.tanzu.vmware.com  0.2.3            Reconcile succeeded  
+  metadata-store            metadata-store.apps.tanzu.vmware.com       1.3.8            Reconcile succeeded  
+  source-controller         controller.source.apps.tanzu.vmware.com    0.5.4            Reconcile succeeded  
+  tap                       tap.tanzu.vmware.com                       1.3.8-build.4    Reconcile succeeded  
+  tap-gui                   tap-gui.tanzu.vmware.com                   1.3.6            Reconcile succeeded  
+  tap-telemetry             tap-telemetry.tanzu.vmware.com             0.3.2            Reconcile succeeded  
+2023/04/27 12:28:07 /tmp/build/f3c1b5a9/source-code/suite/pkg/kubectl/kubectl_helpers/kubectl-helper.go:969: Get external IP of service acc-server in namespace: accelerator-system
+2023/04/27 12:28:07 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: kubectl get services acc-server -n accelerator-system
+2023/04/27 12:28:07 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:41: Output: NAME         TYPE           CLUSTER-IP      EXTERNAL-IP     PORT(S)        AGE
+acc-server   LoadBalancer   10.105.36.108   10.221.171.15   80:32540/TCP   12m
+2023/04/27 12:28:07 /tmp/build/f3c1b5a9/source-code/suite/tap_test/models/tapValuesSchema.go:181: getting tap values schema
+2023/04/27 12:28:07 /tmp/build/f3c1b5a9/source-code/suite/tap_test/models/tapValuesSchema.go:205: read tap values schema file /tmp/build/f3c1b5a9/source-code/suite/resources/suite/tap-values.yaml
+2023/04/27 12:28:07 /tmp/build/f3c1b5a9/source-code/suite/tap_test/models/tapValuesSchema.go:215: unmarshalled file /tmp/build/f3c1b5a9/source-code/suite/resources/suite/tap-values.yaml
+2023/04/27 12:28:07 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:325: [iteration 1] generating accelerator project python-function (projectName "python-functions-accelerator-27-04-2023-05-20-04-169608611", repositoryPrefix "dev.registry.tanzu.vmware.com/tanzu-application-platform/ci-pipeline/apps-27-04-2023-05-20-04-169608611", serverIP "10.221.171.15") in namespace tap-install
+2023/04/27 12:28:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:148: command executed: tanzu accelerator generate python-function --options '{"projectName":"python-functions-accelerator-27-04-2023-05-20-04-169608611", "repositoryPrefix":"dev.registry.tanzu.vmware.com/tanzu-application-platform/ci-pipeline/apps-27-04-2023-05-20-04-169608611", "includeKubernetes": true}' --server-url http://10.221.171.15
+2023/04/27 12:28:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:150: error: exit status 1
+2023/04/27 12:28:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:151: output: Error: Post "http://10.221.171.15/api/accelerators/zip?name=python-function": dial tcp 10.221.171.15:80: connect: connection refused
+[1mUsage:[0m
+  tanzu accelerator generate [flags]
+
+[1mExamples:[0m
+  tanzu accelerator generate <accelerator-name> --options '{"projectName":"test"}'
+
+[1mFlags:[0m
+  -h, --help                  help for generate
+      --options string        options JSON string
+      --options-file string   path to file containing options JSON string
+      --output-dir string     directory that the zip file will be written to
+      --server-url string     the URL for the Application Accelerator server
+
+[1mGlobal Flags:[0m
+      --context name      name of the kubeconfig context to use (default is current-context defined by kubeconfig)
+      --kubeconfig file   kubeconfig file (default is $HOME/.kube/config)
+
+Post "http://10.221.171.15/api/accelerators/zip?name=python-function": dial tcp 10.221.171.15:80: connect: connection refused
+Error: exit status 1
+
+✖  exit status 1 
+2023/04/27 12:28:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:331: error while generating accelerator project python-function (projectName "python-functions-accelerator-27-04-2023-05-20-04-169608611", repositoryPrefix "dev.registry.tanzu.vmware.com/tanzu-application-platform/ci-pipeline/apps-27-04-2023-05-20-04-169608611", serverIP "10.221.171.15") in namespace tap-install
+2023/04/27 12:28:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:332: error: exit status 1
+2023/04/27 12:28:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:333: output: Error: Post "http://10.221.171.15/api/accelerators/zip?name=python-function": dial tcp 10.221.171.15:80: connect: connection refused
+[1mUsage:[0m
+  tanzu accelerator generate [flags]
+
+[1mExamples:[0m
+  tanzu accelerator generate <accelerator-name> --options '{"projectName":"test"}'
+
+[1mFlags:[0m
+  -h, --help                  help for generate
+      --options string        options JSON string
+      --options-file string   path to file containing options JSON string
+      --output-dir string     directory that the zip file will be written to
+      --server-url string     the URL for the Application Accelerator server
+
+[1mGlobal Flags:[0m
+      --context name      name of the kubeconfig context to use (default is current-context defined by kubeconfig)
+      --kubeconfig file   kubeconfig file (default is $HOME/.kube/config)
+
+Post "http://10.221.171.15/api/accelerators/zip?name=python-function": dial tcp 10.221.171.15:80: connect: connection refused
+Error: exit status 1
+
+✖  exit status 1 
+2023/04/27 12:28:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:334: waiting for 30 seconds before retry
+2023/04/27 12:28:40 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:325: [iteration 2] generating accelerator project python-function (projectName "python-functions-accelerator-27-04-2023-05-20-04-169608611", repositoryPrefix "dev.registry.tanzu.vmware.com/tanzu-application-platform/ci-pipeline/apps-27-04-2023-05-20-04-169608611", serverIP "10.221.171.15") in namespace tap-install
+2023/04/27 12:28:40 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:148: command executed: tanzu accelerator generate python-function --options '{"projectName":"python-functions-accelerator-27-04-2023-05-20-04-169608611", "repositoryPrefix":"dev.registry.tanzu.vmware.com/tanzu-application-platform/ci-pipeline/apps-27-04-2023-05-20-04-169608611", "includeKubernetes": true}' --server-url http://10.221.171.15
+2023/04/27 12:28:40 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:150: error: exit status 1
+2023/04/27 12:28:40 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:151: output: Error: Post "http://10.221.171.15/api/accelerators/zip?name=python-function": dial tcp 10.221.171.15:80: connect: connection refused
+[1mUsage:[0m
+  tanzu accelerator generate [flags]
+
+[1mExamples:[0m
+  tanzu accelerator generate <accelerator-name> --options '{"projectName":"test"}'
+
+[1mFlags:[0m
+  -h, --help                  help for generate
+      --options string        options JSON string
+      --options-file string   path to file containing options JSON string
+      --output-dir string     directory that the zip file will be written to
+      --server-url string     the URL for the Application Accelerator server
+
+[1mGlobal Flags:[0m
+      --context name      name of the kubeconfig context to use (default is current-context defined by kubeconfig)
+      --kubeconfig file   kubeconfig file (default is $HOME/.kube/config)
+
+Post "http://10.221.171.15/api/accelerators/zip?name=python-function": dial tcp 10.221.171.15:80: connect: connection refused
+Error: exit status 1
+
+✖  exit status 1 
+2023/04/27 12:28:40 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:331: error while generating accelerator project python-function (projectName "python-functions-accelerator-27-04-2023-05-20-04-169608611", repositoryPrefix "dev.registry.tanzu.vmware.com/tanzu-application-platform/ci-pipeline/apps-27-04-2023-05-20-04-169608611", serverIP "10.221.171.15") in namespace tap-install
+2023/04/27 12:28:40 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:332: error: exit status 1
+2023/04/27 12:28:40 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:333: output: Error: Post "http://10.221.171.15/api/accelerators/zip?name=python-function": dial tcp 10.221.171.15:80: connect: connection refused
+[1mUsage:[0m
+  tanzu accelerator generate [flags]
+
+[1mExamples:[0m
+  tanzu accelerator generate <accelerator-name> --options '{"projectName":"test"}'
+
+[1mFlags:[0m
+  -h, --help                  help for generate
+      --options string        options JSON string
+      --options-file string   path to file containing options JSON string
+      --output-dir string     directory that the zip file will be written to
+      --server-url string     the URL for the Application Accelerator server
+
+[1mGlobal Flags:[0m
+      --context name      name of the kubeconfig context to use (default is current-context defined by kubeconfig)
+      --kubeconfig file   kubeconfig file (default is $HOME/.kube/config)
+
+Post "http://10.221.171.15/api/accelerators/zip?name=python-function": dial tcp 10.221.171.15:80: connect: connection refused
+Error: exit status 1
+
+✖  exit status 1 
+2023/04/27 12:28:40 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:334: waiting for 30 seconds before retry
+2023/04/27 12:29:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:325: [iteration 3] generating accelerator project python-function (projectName "python-functions-accelerator-27-04-2023-05-20-04-169608611", repositoryPrefix "dev.registry.tanzu.vmware.com/tanzu-application-platform/ci-pipeline/apps-27-04-2023-05-20-04-169608611", serverIP "10.221.171.15") in namespace tap-install
+2023/04/27 12:29:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:148: command executed: tanzu accelerator generate python-function --options '{"projectName":"python-functions-accelerator-27-04-2023-05-20-04-169608611", "repositoryPrefix":"dev.registry.tanzu.vmware.com/tanzu-application-platform/ci-pipeline/apps-27-04-2023-05-20-04-169608611", "includeKubernetes": true}' --server-url http://10.221.171.15
+2023/04/27 12:29:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:150: error: exit status 1
+2023/04/27 12:29:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:151: output: Error: Post "http://10.221.171.15/api/accelerators/zip?name=python-function": dial tcp 10.221.171.15:80: connect: connection refused
+[1mUsage:[0m
+  tanzu accelerator generate [flags]
+
+[1mExamples:[0m
+  tanzu accelerator generate <accelerator-name> --options '{"projectName":"test"}'
+
+[1mFlags:[0m
+  -h, --help                  help for generate
+      --options string        options JSON string
+      --options-file string   path to file containing options JSON string
+      --output-dir string     directory that the zip file will be written to
+      --server-url string     the URL for the Application Accelerator server
+
+[1mGlobal Flags:[0m
+      --context name      name of the kubeconfig context to use (default is current-context defined by kubeconfig)
+      --kubeconfig file   kubeconfig file (default is $HOME/.kube/config)
+
+Post "http://10.221.171.15/api/accelerators/zip?name=python-function": dial tcp 10.221.171.15:80: connect: connection refused
+Error: exit status 1
+
+✖  exit status 1 
+2023/04/27 12:29:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:331: error while generating accelerator project python-function (projectName "python-functions-accelerator-27-04-2023-05-20-04-169608611", repositoryPrefix "dev.registry.tanzu.vmware.com/tanzu-application-platform/ci-pipeline/apps-27-04-2023-05-20-04-169608611", serverIP "10.221.171.15") in namespace tap-install
+2023/04/27 12:29:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:332: error: exit status 1
+2023/04/27 12:29:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:333: output: Error: Post "http://10.221.171.15/api/accelerators/zip?name=python-function": dial tcp 10.221.171.15:80: connect: connection refused
+[1mUsage:[0m
+  tanzu accelerator generate [flags]
+
+[1mExamples:[0m
+  tanzu accelerator generate <accelerator-name> --options '{"projectName":"test"}'
+
+[1mFlags:[0m
+  -h, --help                  help for generate
+      --options string        options JSON string
+      --options-file string   path to file containing options JSON string
+      --output-dir string     directory that the zip file will be written to
+      --server-url string     the URL for the Application Accelerator server
+
+[1mGlobal Flags:[0m
+      --context name      name of the kubeconfig context to use (default is current-context defined by kubeconfig)
+      --kubeconfig file   kubeconfig file (default is $HOME/.kube/config)
+
+Post "http://10.221.171.15/api/accelerators/zip?name=python-function": dial tcp 10.221.171.15:80: connect: connection refused
+Error: exit status 1
+
+✖  exit status 1 
+2023/04/27 12:29:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:334: waiting for 30 seconds before retry
+2023/04/27 12:29:40 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:325: [iteration 4] generating accelerator project python-function (projectName "python-functions-accelerator-27-04-2023-05-20-04-169608611", repositoryPrefix "dev.registry.tanzu.vmware.com/tanzu-application-platform/ci-pipeline/apps-27-04-2023-05-20-04-169608611", serverIP "10.221.171.15") in namespace tap-install
+2023/04/27 12:29:40 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:148: command executed: tanzu accelerator generate python-function --options '{"projectName":"python-functions-accelerator-27-04-2023-05-20-04-169608611", "repositoryPrefix":"dev.registry.tanzu.vmware.com/tanzu-application-platform/ci-pipeline/apps-27-04-2023-05-20-04-169608611", "includeKubernetes": true}' --server-url http://10.221.171.15
+2023/04/27 12:29:40 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:150: error: exit status 1
+2023/04/27 12:29:40 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:151: output: Error: Post "http://10.221.171.15/api/accelerators/zip?name=python-function": dial tcp 10.221.171.15:80: connect: connection refused
+[1mUsage:[0m
+  tanzu accelerator generate [flags]
+
+[1mExamples:[0m
+  tanzu accelerator generate <accelerator-name> --options '{"projectName":"test"}'
+
+[1mFlags:[0m
+  -h, --help                  help for generate
+      --options string        options JSON string
+      --options-file string   path to file containing options JSON string
+      --output-dir string     directory that the zip file will be written to
+      --server-url string     the URL for the Application Accelerator server
+
+[1mGlobal Flags:[0m
+      --context name      name of the kubeconfig context to use (default is current-context defined by kubeconfig)
+      --kubeconfig file   kubeconfig file (default is $HOME/.kube/config)
+
+Post "http://10.221.171.15/api/accelerators/zip?name=python-function": dial tcp 10.221.171.15:80: connect: connection refused
+Error: exit status 1
+
+✖  exit status 1 
+2023/04/27 12:29:40 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:331: error while generating accelerator project python-function (projectName "python-functions-accelerator-27-04-2023-05-20-04-169608611", repositoryPrefix "dev.registry.tanzu.vmware.com/tanzu-application-platform/ci-pipeline/apps-27-04-2023-05-20-04-169608611", serverIP "10.221.171.15") in namespace tap-install
+2023/04/27 12:29:40 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:332: error: exit status 1
+2023/04/27 12:29:40 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:333: output: Error: Post "http://10.221.171.15/api/accelerators/zip?name=python-function": dial tcp 10.221.171.15:80: connect: connection refused
+[1mUsage:[0m
+  tanzu accelerator generate [flags]
+
+[1mExamples:[0m
+  tanzu accelerator generate <accelerator-name> --options '{"projectName":"test"}'
+
+[1mFlags:[0m
+  -h, --help                  help for generate
+      --options string        options JSON string
+      --options-file string   path to file containing options JSON string
+      --output-dir string     directory that the zip file will be written to
+      --server-url string     the URL for the Application Accelerator server
+
+[1mGlobal Flags:[0m
+      --context name      name of the kubeconfig context to use (default is current-context defined by kubeconfig)
+      --kubeconfig file   kubeconfig file (default is $HOME/.kube/config)
+
+Post "http://10.221.171.15/api/accelerators/zip?name=python-function": dial tcp 10.221.171.15:80: connect: connection refused
+Error: exit status 1
+
+✖  exit status 1 
+2023/04/27 12:29:40 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:334: waiting for 30 seconds before retry
+2023/04/27 12:30:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/tanzu/tanzuCmds/tanzu-commands.go:343: accelerator project not generated after 4 retries
+2023/04/27 12:30:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: ls -lt /tmp/build/f3c1b5a9/source-code/suite/python-functions-accelerator-27-04-2023-05-20-04-169608611
+2023/04/27 12:30:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:38: ERROR : exit status 2
+2023/04/27 12:30:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:39: OUTPUT : ls: cannot access '/tmp/build/f3c1b5a9/source-code/suite/python-functions-accelerator-27-04-2023-05-20-04-169608611': No such file or directory
+ 
+2023/04/27 12:30:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:36: Command executed: unzip python-functions-accelerator-27-04-2023-05-20-04-169608611.zip -d /tmp/build/f3c1b5a9/source-code/suite
+2023/04/27 12:30:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:38: ERROR : exit status 9
+2023/04/27 12:30:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:39: OUTPUT : unzip:  cannot find or open python-functions-accelerator-27-04-2023-05-20-04-169608611.zip, python-functions-accelerator-27-04-2023-05-20-04-169608611.zip.zip or python-functions-accelerator-27-04-2023-05-20-04-169608611.zip.ZIP.
+ 
+2023/04/27 12:30:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/git/git.go:149: setting git config (username dapdelivery, email svc.dapdelivery@gmail.com)
+2023/04/27 12:30:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:148: command executed: git config --global user.name dapdelivery; git config --global user.email svc.dapdelivery@gmail.com
+2023/04/27 12:30:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:153: output: 
+2023/04/27 12:30:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/git/git.go:159: git config (username dapdelivery, email svc.dapdelivery@gmail.com)
+2023/04/27 12:30:10 /tmp/build/f3c1b5a9/source-code/suite/pkg/git/git.go:160: output: 
+2023/04/27 12:30:11 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:148: command executed: cd /tmp/build/f3c1b5a9/source-code/suite/python-functions-accelerator-27-04-2023-05-20-04-169608611; git init
+2023/04/27 12:30:11 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:153: output: bash: line 0: cd: /tmp/build/f3c1b5a9/source-code/suite/python-functions-accelerator-27-04-2023-05-20-04-169608611: No such file or directory
+Initialized empty Git repository in /tmp/build/f3c1b5a9/source-code/suite/tap_test/multicluster_outerloop_func_scan_test/.git/
+2023/04/27 12:30:11 /tmp/build/f3c1b5a9/source-code/suite/pkg/github/github.go:48: creating github repo python-functions-accelerator-27-04-2023-05-20-04-169608611
+2023/04/27 12:30:12 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:148: command executed: echo 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 > token; gh auth login -h Github.com --with-token < token; rm token; cd /tmp/build/f3c1b5a9/source-code/suite/python-functions-accelerator-27-04-2023-05-20-04-169608611; gh repo create python-functions-accelerator-27-04-2023-05-20-04-169608611 --public  --source=.
+2023/04/27 12:30:12 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:153: output: bash: line 0: cd: /tmp/build/f3c1b5a9/source-code/suite/python-functions-accelerator-27-04-2023-05-20-04-169608611: No such file or directory
+https://github.com/dapdelivery/python-functions-accelerator-27-04-2023-05-20-04-169608611
+2023/04/27 12:30:12 /tmp/build/f3c1b5a9/source-code/suite/pkg/github/github.go:56: github repo python-functions-accelerator-27-04-2023-05-20-04-169608611 created 
+2023/04/27 12:30:12 /tmp/build/f3c1b5a9/source-code/suite/pkg/github/github.go:57: output: bash: line 0: cd: /tmp/build/f3c1b5a9/source-code/suite/python-functions-accelerator-27-04-2023-05-20-04-169608611: No such file or directory
+https://github.com/dapdelivery/python-functions-accelerator-27-04-2023-05-20-04-169608611
+2023/04/27 12:30:12 /tmp/build/f3c1b5a9/source-code/suite/pkg/git/git.go:167: setting git remote url (https://github.com/dapdelivery/python-functions-accelerator-27-04-2023-05-20-04-169608611.git) for repo at /tmp/build/f3c1b5a9/source-code/suite/python-functions-accelerator-27-04-2023-05-20-04-169608611
+2023/04/27 12:30:12 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:148: command executed: cd /tmp/build/f3c1b5a9/source-code/suite/python-functions-accelerator-27-04-2023-05-20-04-169608611; git remote set-url origin https://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@github.com/dapdelivery/python-functions-accelerator-27-04-2023-05-20-04-169608611.git
+2023/04/27 12:30:12 /tmp/build/f3c1b5a9/source-code/suite/pkg/utils/linux_util/linux_util.go:153: output: bash: line 0: cd: /tmp/build/f3c1b5a9/source-code/suite/python-functions-accelerator-27-04-2023-05-20-04-169608611: No such file or directory
+2023/04/27 12:30:12 /tmp/build/f3c1b5a9/source-code/suite/pkg/git/git.go:178: git remote url (https://github.com/dapdelivery/python-functions-accelerator-27-04-2023-05-20-04-169608611.git) set for repo at /tmp/build/f3c1b5a9/source-code/suite/python-functions-accelerator-27-04-2023-05-20-04-169608611
+2023/04/27 12:30:12 /tmp/build/f3c1b5a9/source-code/suite/pkg/git/git.go:179: output: bash: line 0: cd: /tmp/build/f3c1b5a9/source-code/suite/python-functions-accelerator-27-04-2023-05-20-04-169608611: No such file or directory
+2023/04/27 12:30:12 /tmp/build/f3c1b5a9/source-code/suite/pkg/git/git.go:69: adding all files for repo at /tmp/build/f3c1b5a9/source-code/suite/python-functions-accelerator-27-04-2023-05-20-04-169608611 to git index
